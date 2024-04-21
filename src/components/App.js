@@ -100,7 +100,7 @@ function App() {
   return (
     <div className="App">
 
-      <h3 className='rules'>Explain these terms in context of options trading.<br></br>If you do not know just say IDK.<br></br>Do not change your answers after progressing</h3>
+      <h3 className='rules'>Explain these terms in context of options trading.<br></br>If you do not know just say IDK.<br></br>Do not change your answers after progressing<br></br>Do not look below before answering</h3>
 
       <h3>What Does Theta Mean?</h3>
       <input className='long' onChange={e => setValue11(e.target.value)}></input>
@@ -118,7 +118,7 @@ function App() {
       <input className='long' onChange={e => setValue15(e.target.value)}></input>
 
 
-      <div></div>
+      <div className='gap'></div>
       <div className='HEAD rules'>Answer all questions as prompted.<br></br>After reading the question start the timer.<br></br>Once a cell is clicked the timer will stop.</div>
 
       <div></div>

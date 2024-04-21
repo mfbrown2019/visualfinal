@@ -33,6 +33,10 @@ td {
   border-bottom: 1px dashed #555;
 }
 
+.gap {
+  margin-bottom: 25rem;
+}
+
 .HEAD {
   font-weight: bold;
 }
