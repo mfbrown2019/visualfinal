@@ -22,6 +22,8 @@ function App() {
   const [value13, setValue13] = useState("");
   const [value14, setValue14] = useState("");
   const [value15, setValue15] = useState("");
+  const [value16, setValue16] = useState("");
+  const [value17, setValue17] = useState("");
 
   const data1My = [
     ["Loss / Day", "Open Contracts", "Contracts Bought", "P&L / $1 Change", "Sell", "Buy", "$100.34"],
@@ -103,19 +105,25 @@ function App() {
       <h3 className='rules'>Explain these terms in context of options trading.<br></br>If you do not know just say IDK.<br></br>Do not change your answers after progressing<br></br>Do not look below before answering</h3>
 
       <h3>What Does Theta Mean?</h3>
-      <input className='long' onChange={e => setValue11(e.target.value)}></input>
+      <input className='long' onChange={e => setValue1(e.target.value)}></input>
 
       <h3>What Does Delta Mean?</h3>
-      <input className='long' onChange={e => setValue12(e.target.value)}></input>
+      <input className='long' onChange={e => setValue2(e.target.value)}></input>
 
       <h3>What Does Bid Mean?</h3>
-      <input className='long' onChange={e => setValue13(e.target.value)}></input>
+      <input className='long' onChange={e => setValue3(e.target.value)}></input>
 
       <h3>What Does Ask Mean?</h3>
-      <input className='long' onChange={e => setValue14(e.target.value)}></input>
+      <input className='long' onChange={e => setValue4(e.target.value)}></input>
 
       <h3>What Does Volatility Mean?</h3>
-      <input className='long' onChange={e => setValue15(e.target.value)}></input>
+      <input className='long' onChange={e => setValue5(e.target.value)}></input>
+
+      <h3>What Does Call Mean?</h3>
+      <input className='long' onChange={e => setValue6(e.target.value)}></input>
+
+      <h3>What Does Put Mean?</h3>
+      <input className='long' onChange={e => setValue7(e.target.value)}></input>
 
 
       <div className='gap'></div>
@@ -124,22 +132,6 @@ function App() {
       <div></div>
 
 
-      
-      {/* Theta My Example */}
-      <h3>Choose the contract that will lose $19 every day you own it</h3>
-      <button className='btn' onClick={handleStart}>Start Timer</button>
-      <table>
-        <My />
-        <tbody>
-            {data1My.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassMy(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
 
       {/* Bid Cost Example Webull */}
       <h3>Click the contract that cost $166 to buy</h3>  
@@ -151,22 +143,6 @@ function App() {
             <tr key={rowIndex} className={getRowClassW(rowIndex)}>
                 {row.map((cell, colIndex) => (
                     <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-
-
-      <h3>Click any of the In the Money contracts</h3>
-      <button className='btn' onClick={handleStart}>Start Timer</button>
-      <table>
-        <My />
-        <tbody>
-            {data1My.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassMy(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
                 ))}
             </tr>
             ))}
@@ -206,6 +182,57 @@ function App() {
         </tbody>
       </table>
 
+      
+
+      <h3>Choose the contract that will lose $19 every day you own it</h3>
+      <button className='btn' onClick={handleStart}>Start Timer</button>
+   
+      <table>
+          <Webull />
+          <tbody>
+            {data1W.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                    <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+
+
+      {/* Theta My Example */}
+      <h3>Choose the contract that will lose $19 every day you own it</h3>
+      <button className='btn' onClick={handleStart}>Start Timer</button>
+      <table>
+        <My />
+        <tbody>
+            {data1My.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassMy(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+
+
+      <h3>Click any of the In the Money contracts</h3>
+      <button className='btn' onClick={handleStart}>Start Timer</button>
+      <table>
+        <My />
+        <tbody>
+            {data1My.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassMy(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+
 
 
       <h3>Click the contract that makes the least amount of money if the stock goes up $3</h3>  
@@ -239,22 +266,6 @@ function App() {
       </table>
 
 
-      <h3>Choose the contract that will lose $19 every day you own it</h3>
-      <button className='btn' onClick={handleStart}>Start Timer</button>
-   
-      <table>
-          <Webull />
-          <tbody>
-            {data1W.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                    <td key={colIndex} onClick={() => handleStop(rowIndex, colIndex)}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-
       <h3 className='rules'>Now you will type your answer instead of clicking a contract<br></br>Remeber not to go back if a question changes your mind later</h3>
 
       <h3>How much money does the $99 Strike Cost</h3>
@@ -270,7 +281,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input  onChange={e => setValue1(e.target.value)}></input>
+      <input  onChange={e => setValue8(e.target.value)}></input>
 
 
       <h3>How much money do you lose everyday you have the $103 strike contract</h3>
@@ -286,7 +297,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input  onChange={e => setValue2(e.target.value)}></input>
+      <input  onChange={e => setValue9(e.target.value)}></input>
 
       <h3>How much money do you lose if the $100 strike contract goes down $1</h3>
       <table>
@@ -301,7 +312,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input  onChange={e => setValue3(e.target.value)}></input>
+      <input  onChange={e => setValue10(e.target.value)}></input>
 
       <h3>How much money do you lose if the $103 strike contract goes up $1</h3>
       <table>
@@ -316,7 +327,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input  onChange={e => setValue4(e.target.value)}></input>
+      <input  onChange={e => setValue11(e.target.value)}></input>
 
 
       <h3>How many people are holding the $99 strike contract</h3>
@@ -332,7 +343,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input  onChange={e => setValue5(e.target.value)}></input>
+      <input  onChange={e => setValue12(e.target.value)}></input>
 
 
       {/*  */}
@@ -349,7 +360,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input onChange={e => setValue6(e.target.value)}></input>
+      <input onChange={e => setValue13(e.target.value)}></input>
 
 
       <h3>How much money do you lose everyday you have the $103 strike contract</h3>
@@ -365,7 +376,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input onChange={e => setValue7(e.target.value)}></input>
+      <input onChange={e => setValue14(e.target.value)}></input>
 
       <h3>How much money do you lose if the $100 strike contract goes down $1</h3>
       <table>
@@ -380,7 +391,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input onChange={e => setValue8(e.target.value)}></input>
+      <input onChange={e => setValue15(e.target.value)}></input>
 
       <h3>How much money do you lose if the $103 strike contract goes up $1</h3>
       <table>
@@ -395,7 +406,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input onChange={e => setValue9(e.target.value)}></input>
+      <input onChange={e => setValue16(e.target.value)}></input>
 
 
       <h3>How many people are holding the $99 strike contract</h3>
@@ -411,7 +422,7 @@ function App() {
             ))}
         </tbody>
       </table>
-      <input onChange={e => setValue10(e.target.value)}></input>
+      <input onChange={e => setValue17(e.target.value)}></input>
           
       <div></div>
 
@@ -421,25 +432,29 @@ function App() {
       <h3 className='rules'>Take a photo of your answers and send them to me</h3>
 
       <div className='results'>
-          {savedTimes.map((savedTime, index) => (
-            <div key={index + 1}>Problem {index + 1} | {savedTime} | {answer[index]}</div>
-          ))}
 
-      <div>Problem 9 | {value1}</div>
-      <div>Problem 10 | {value2}</div>
-      <div>Problem 11 | {value3}</div>
-      <div>Problem 12 | {value4}</div>
-      <div>Problem 13 | {value5}</div>
-      <div>Problem 14 | {value6}</div>
-      <div>Problem 15 | {value7}</div>
-      <div>Problem 16 | {value8}</div>
-      <div>Problem 17 | {value9}</div>
-      <div>Problem 18 | {value10}</div>
-      <div>Problem 19 | {value11}</div>
-      <div>Problem 20 | {value12}</div>
-      <div>Problem 21 | {value13}</div>
-      <div>Problem 22 | {value14}</div>
-      <div>Problem 23 | {value15}</div>
+        <div>Problem 1 | {value1}</div>
+        <div>Problem 2 | {value2}</div>
+        <div>Problem 3 | {value3}</div>
+        <div>Problem 4 | {value4}</div>
+        <div>Problem 5 | {value5}</div>
+        <div>Problem 6 | {value6}</div>
+        <div>Problem 7 | {value7}</div>
+        {savedTimes.map((savedTime, index) => (
+          <div key={index + 1}>Problem {index + 8} | {savedTime} | {answer[index]}</div>
+        ))}
+
+    
+        <div>Problem 16 | {value8}</div>
+        <div>Problem 17 | {value9}</div>
+        <div>Problem 18 | {value10}</div>
+        <div>Problem 19 | {value11}</div>
+        <div>Problem 20 | {value12}</div>
+        <div>Problem 21 | {value13}</div>
+        <div>Problem 22 | {value14}</div>
+        <div>Problem 23 | {value15}</div>
+        <div>Problem 24 | {value16}</div>
+        <div>Problem 25 | {value17}</div>
       </div>
 
     </div>
