@@ -442,21 +442,21 @@ function App() {
         <div>Problem 5 | {value5}</div>
         <div>Problem 6 | {value6}</div>
         <div>Problem 7 | {value7}</div>
-        <div>Problem 8 | {value3}</div>
-        <div>Problem 9 | {value4}</div>
-        <div>Problem 10 | {value5}</div>
-        <div>Problem 11 | {value6}</div>
-        <div>Problem 12 | {value7}</div>
+        <div>Problem 8 | {valu8}</div>
+        <div>Problem 9 | {value9}</div>
+        <div>Problem 10 | {value10}</div>
+        <div>Problem 11 | {value11}</div>
+        <div>Problem 12 | {value12}</div>
         {savedTimes.map((savedTime, index) => (
           <div key={index + 1}>Problem {index + 13} | {savedTime} | {answer[index]}</div>
         ))}
 
     
-        <div>Problem 21 | {value8}</div>
-        <div>Problem 22 | {value9}</div>
-        <div>Problem 23 | {value10}</div>
-        <div>Problem 24 | {value11}</div>
-        <div>Problem 25 | {value12}</div>
+        <div>Problem 21 | {value13}</div>
+        <div>Problem 22 | {value14}</div>
+        <div>Problem 23 | {value15}</div>
+        <div>Problem 24 | {value16}</div>
+        <div>Problem 25 | {value17}</div>
       </div>
 
     </div>
