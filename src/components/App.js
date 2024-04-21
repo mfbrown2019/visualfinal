@@ -100,9 +100,28 @@ function App() {
   return (
     <div className="App">
 
+      <h3 className='rules'>Explain these terms in context of options trading.<br></br>If you do not know just say IDK.<br></br>Do not change your answers after progressing</h3>
+
+      <h3>What Does Theta Mean?</h3>
+      <input className='long' onChange={e => setValue11(e.target.value)}></input>
+
+      <h3>What Does Delta Mean?</h3>
+      <input className='long' onChange={e => setValue12(e.target.value)}></input>
+
+      <h3>What Does Bid Mean?</h3>
+      <input className='long' onChange={e => setValue13(e.target.value)}></input>
+
+      <h3>What Does Ask Mean?</h3>
+      <input className='long' onChange={e => setValue14(e.target.value)}></input>
+
+      <h3>What Does Volatility Mean?</h3>
+      <input className='long' onChange={e => setValue15(e.target.value)}></input>
+
+
+      <div></div>
       <div className='HEAD rules'>Answer all questions as prompted.<br></br>After reading the question start the timer.<br></br>Once a cell is clicked the timer will stop.</div>
 
-      
+      <div></div>
 
 
       
@@ -395,26 +414,11 @@ function App() {
       <input onChange={e => setValue10(e.target.value)}></input>
           
       <div></div>
-      <h3 className='rules'>Explain these terms in context of options trading.<br></br>If you do not know just say IDK</h3>
 
-      <h3>What Does Theta Mean?</h3>
-      <input className='long' onChange={e => setValue11(e.target.value)}></input>
-
-      <h3>What Does Delta Mean?</h3>
-      <input className='long' onChange={e => setValue12(e.target.value)}></input>
-
-      <h3>What Does Bid Mean?</h3>
-      <input className='long' onChange={e => setValue13(e.target.value)}></input>
-
-      <h3>What Does Ask Mean?</h3>
-      <input className='long' onChange={e => setValue14(e.target.value)}></input>
-
-      <h3>What Does Volatility Mean?</h3>
-      <input className='long' onChange={e => setValue15(e.target.value)}></input>
 
 
       <div></div>
-      <h3 className='rules'>Results</h3>
+      <h3 className='rules'>Take a photo of your answers and send them to me</h3>
 
       <div className='results'>
           {savedTimes.map((savedTime, index) => (
