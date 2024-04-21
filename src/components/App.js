@@ -126,6 +126,84 @@ function App() {
       <input className='long' onChange={e => setValue7(e.target.value)}></input>
 
 
+<div className='gap'></div>
+      <h3>How much money does the $99 Strike Cost</h3>
+      <table>
+          <Webull />
+          <tbody>
+            {data1W.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                    <td key={colIndex}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+      <input  onChange={e => setValue8(e.target.value)}></input>
+
+
+      <h3>How much money do you lose everyday you have the $103 strike contract</h3>
+      <table>
+          <Webull />
+          <tbody>
+            {data1W.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                    <td key={colIndex}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+      <input  onChange={e => setValue9(e.target.value)}></input>
+
+      <h3>How much money do you lose if the $100 strike contract goes down $1</h3>
+      <table>
+          <Webull />
+          <tbody>
+            {data1W.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                    <td key={colIndex}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+      <input  onChange={e => setValue10(e.target.value)}></input>
+
+      <h3>How much money do you gain if the $103 strike contract goes up $1</h3>
+      <table>
+          <Webull />
+          <tbody>
+            {data1W.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                    <td key={colIndex}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+      <input  onChange={e => setValue11(e.target.value)}></input>
+
+
+      <h3>How many people are holding the $99 strike contract</h3>
+      <table>
+          <Webull />
+          <tbody>
+            {data1W.map((row, rowIndex) => (
+            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
+                {row.map((cell, colIndex) => (
+                    <td key={colIndex}>{cell}</td>
+                ))}
+            </tr>
+            ))}
+        </tbody>
+      </table>
+      <input  onChange={e => setValue12(e.target.value)}></input>
+
       <div className='gap'></div>
       <div className='HEAD rules'>Answer all questions as prompted.<br></br>After reading the question start the timer.<br></br>Once a cell is clicked the timer will stop.</div>
 
@@ -268,83 +346,7 @@ function App() {
 
       <h3 className='rules'>Now you will type your answer instead of clicking a contract<br></br>Remeber not to go back if a question changes your mind later</h3>
 
-      <h3>How much money does the $99 Strike Cost</h3>
-      <table>
-          <Webull />
-          <tbody>
-            {data1W.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                    <td key={colIndex}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-      <input  onChange={e => setValue8(e.target.value)}></input>
-
-
-      <h3>How much money do you lose everyday you have the $103 strike contract</h3>
-      <table>
-          <Webull />
-          <tbody>
-            {data1W.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                    <td key={colIndex}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-      <input  onChange={e => setValue9(e.target.value)}></input>
-
-      <h3>How much money do you lose if the $100 strike contract goes down $1</h3>
-      <table>
-          <Webull />
-          <tbody>
-            {data1W.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                    <td key={colIndex}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-      <input  onChange={e => setValue10(e.target.value)}></input>
-
-      <h3>How much money do you lose if the $103 strike contract goes up $1</h3>
-      <table>
-          <Webull />
-          <tbody>
-            {data1W.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                    <td key={colIndex}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-      <input  onChange={e => setValue11(e.target.value)}></input>
-
-
-      <h3>How many people are holding the $99 strike contract</h3>
-      <table>
-          <Webull />
-          <tbody>
-            {data1W.map((row, rowIndex) => (
-            <tr key={rowIndex} className={getRowClassW(rowIndex)}>
-                {row.map((cell, colIndex) => (
-                    <td key={colIndex}>{cell}</td>
-                ))}
-            </tr>
-            ))}
-        </tbody>
-      </table>
-      <input  onChange={e => setValue12(e.target.value)}></input>
-
+      
 
       {/*  */}
       <h3>How much money does the $99 Strike Cost</h3>
@@ -440,21 +442,21 @@ function App() {
         <div>Problem 5 | {value5}</div>
         <div>Problem 6 | {value6}</div>
         <div>Problem 7 | {value7}</div>
+        <div>Problem 8 | {value3}</div>
+        <div>Problem 9 | {value4}</div>
+        <div>Problem 10 | {value5}</div>
+        <div>Problem 11 | {value6}</div>
+        <div>Problem 12 | {value7}</div>
         {savedTimes.map((savedTime, index) => (
-          <div key={index + 1}>Problem {index + 8} | {savedTime} | {answer[index]}</div>
+          <div key={index + 1}>Problem {index + 13} | {savedTime} | {answer[index]}</div>
         ))}
 
     
-        <div>Problem 16 | {value8}</div>
-        <div>Problem 17 | {value9}</div>
-        <div>Problem 18 | {value10}</div>
-        <div>Problem 19 | {value11}</div>
-        <div>Problem 20 | {value12}</div>
-        <div>Problem 21 | {value13}</div>
-        <div>Problem 22 | {value14}</div>
-        <div>Problem 23 | {value15}</div>
-        <div>Problem 24 | {value16}</div>
-        <div>Problem 25 | {value17}</div>
+        <div>Problem 21 | {value8}</div>
+        <div>Problem 22 | {value9}</div>
+        <div>Problem 23 | {value10}</div>
+        <div>Problem 24 | {value11}</div>
+        <div>Problem 25 | {value12}</div>
       </div>
 
     </div>
