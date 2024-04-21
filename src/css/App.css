@@ -1,0 +1,102 @@
+* {
+  padding: .5rem;
+  margin: 0px;
+  text-align: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border: 1px solid black;
+  background-color: lightblue;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+select {
+  background-color: lightblue;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+
+th {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+td {
+  border-right: 1px solid black;
+  border-bottom: 1px dashed #555;
+}
+
+.HEAD {
+  font-weight: bold;
+}
+
+.ATM {
+  border-top: 2px solid blue;
+  background-color: lightcoral;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.long{
+  width: 100%;
+}
+
+.ITM {
+  background-color: lightgreen;
+}
+
+.OTM {
+  background-color: lightcoral;
+}
+
+
+.ATMW {
+  color: white;
+  border-top: 20px solid black;
+  background-color: #555;
+}
+
+.ITMW {
+  color: white;
+  background-color: rgb(42, 6, 42);
+}
+
+.OTMW {
+  color: white;
+  background-color: #555;
+}
+.rules {
+  border: 3px solid black;
+  background-color: red;
+  font-size: 2rem;
+}
+
+.btn {
+  margin-bottom: .5rem;
+}
+
+.sell {
+  color: red;
+}
+
+.buy {
+  color: lightgreen;
+}
+
+.b {
+  font-weight: bold;
+}
+
+textarea     {
+  width: 100%;
+}
