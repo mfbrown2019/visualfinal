@@ -49,7 +49,7 @@ function App() {
   const [isRunning, setIsRunning] = useState(false);
   // State to save all recorded times
   const [savedTimes, setSavedTimes] = useState([]);
-
+  const [answer, setSavedAnswer] = useState([]);
   useEffect(() => {
     let interval;
 
@@ -74,6 +74,8 @@ function App() {
       // Save the current time and reset the timer
       setSavedTimes((prevTimes) => [...prevTimes, time]);
       setTime(0); // Reset the timer to zero
+
+      setSavedAnswer((any) => [...any, rowIndex]);
       console.log(rowIndex, colIndex)
     }
 
@@ -416,7 +418,7 @@ function App() {
 
       <div className='results'>
           {savedTimes.map((savedTime, index) => (
-            <div key={index + 1}>Problem {index + 1} | {savedTime}</div>
+            <div key={index + 1}>Problem {index + 1} | {savedTime} | {answer[index]}</div>
           ))}
 
       <div>Problem 9 | {value1}</div>
