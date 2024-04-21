@@ -442,7 +442,7 @@ function App() {
         <div>Problem 5 | {value5}</div>
         <div>Problem 6 | {value6}</div>
         <div>Problem 7 | {value7}</div>
-        <div>Problem 8 | {valu8}</div>
+        <div>Problem 8 | {value8}</div>
         <div>Problem 9 | {value9}</div>
         <div>Problem 10 | {value10}</div>
         <div>Problem 11 | {value11}</div>
